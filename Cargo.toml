@@ -1,0 +1,14 @@
+[package]
+name = "specter"
+version = "0.1.0"
+edition = "2018"
+
+# panic = "abort" coz unwinding is a complicated os level thing that only linus torvalds or ppl like him would know :(
+# now, eh_personality (whatever that is) is not needed. Woohoo!
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+[dependencies]
